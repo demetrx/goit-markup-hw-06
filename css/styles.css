@@ -653,8 +653,8 @@ header .container{
     border: 0;
     background-color: inherit;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 8px;
+    right: 8px;
     cursor: pointer;
     fill: currentColor;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -688,14 +688,13 @@ header .container{
     display: inline-block;
     left: 40px;
     top: 0px;
-    transform: translateY(100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translate(-40px, -19px);
 }
 
 
 .shift-field:focus-within .shift-label,
 .shift-input:not(:placeholder-shown) + .shift-label{
-    transform: translate(-40px, -19px);
+    
 }
 
 .modal p{
@@ -730,6 +729,13 @@ textarea{
     height: 120px;
     display: block;
     box-sizing: border-box;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+}
+
+textarea::placeholder{
+    color: rgba(117, 117, 117, 0.5);
 }
 
 input, textarea{
@@ -789,6 +795,8 @@ label.form-comment{
 
 .modal .form-submit{
     display: block;
+    width: 200px;
+    height: 50px;
 }
 
 .checkbox-icon{
